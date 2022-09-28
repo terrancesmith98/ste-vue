@@ -15,3 +15,9 @@ export default {
     },
 };
 </script>
+
+<style lang="scss">
+h1 {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+</style>
