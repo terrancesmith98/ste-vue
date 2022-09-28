@@ -1,39 +1,28 @@
 <template>
-    <div class="p-3">
+    <div class="p-3 mb-5 mh-75">
         <h1>Welcome to Strength Through Education</h1>
-        <div class="card" v-for="(member, index) in teamMembers">
-            <h4>{{ member.first_name }}</h4>
+        <div class="statements-container p-5 background-dark">
+            <h2>Statements of Support</h2>
+            <support-statements></support-statements>
         </div>
     </div>
 </template>
 
 <script>
-import VueSlickCarousel from "vue-slick-carousel";
+import axios from "axios";
 import { mapState } from "vuex";
+import SupportStatements from "./SupportStatements.vue";
 export default {
     data() {
-        return {
-            settings: {
-                dots: true,
-                dotsClass: "slick-dots custom-dot-class",
-                edgeFriction: 0.35,
-                infinite: true,
-                speed: 500,
-                autoplay: true,
-                controls: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-            },
-        };
+        return {};
     },
     computed: {
-        ...mapState(["teamMembers"]),
+        ...mapState(["teamMembers", "supportStatements"]),
     },
     components: {
-        VueSlickCarousel,
-    },
-    created() {
-        this.$store.dispatch("loadTeamMembers");
+        SupportStatements,
     },
 };
 </script>
+
+<style lang="scss"></style>

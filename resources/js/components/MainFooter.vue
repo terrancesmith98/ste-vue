@@ -9,8 +9,6 @@ footer {
     background: #333;
     color: whitesmoke;
     height: 100px;
-    position: absolute;
-    bottom: 0;
     width: 100%;
 }
 </style>

@@ -19,8 +19,8 @@ class TeamMemberController extends Controller
             'first_name' => 'required',
             'last_name' => 'required',
             'title' => 'required',
-            'bio', 'required',
-            'image', 'required'
+            // 'bio', 'required',
+            // 'image', 'required'
         ]);
 
 
@@ -28,8 +28,8 @@ class TeamMemberController extends Controller
         $member->first_name = $data['first_name'];
         $member->last_name = $data['last_name'];
         $member->title = $data['title'];
-        $member->bio = $data['bio'];
-        $member->image = $data['image'];
+        $member->bio = $request['bio'];
+        $member->image = $request['image'];
 
         $member->save();
 
