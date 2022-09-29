@@ -17,7 +17,17 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../scss/utilities/variables";
+body {
+    font-family: "Highgate", Arial, Helvetica, sans-serif;
+    background-color: #f0f0e7;
+}
 h1 {
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: $primary-color;
+}
+h2 {
+    font-size: 1.5em;
+    color: $secondary-color;
 }
 </style>

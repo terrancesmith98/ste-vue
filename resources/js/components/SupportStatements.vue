@@ -50,21 +50,24 @@ export default {
 </script>
 
 <style lang="scss">
+.carousel {
+    box-shadow: 0 0 10px #777;
+}
 .carousel__slide {
     padding: 2em;
     background: whitesmoke;
-    color: #333;
+    color: rgb(110, 107, 94);
     margin: 0.5em;
     text-align: left;
     flex-direction: column;
     .statement {
         &::before {
             content: "\0022";
-            margin-right: 0.5em;
+            margin-right: 0.25em;
         }
         &::after {
             content: "\0022";
-            margin-left: 0.5em;
+            margin-left: 0.25em;
         }
     }
     .signature {
@@ -76,11 +79,12 @@ button.carousel__next,
 button.carousel__prev {
     background: #333;
 }
-.button.carousel__pagination {
-    background: #666;
-    &:active {
-        background: #333;
-    }
+
+.carousel__pagination-button {
+    background-color: #8e8e8e !important;
+}
+.carousel__pagination-button--active {
+    background-color: #333 !important;
 }
 .carousel__icon {
     fill: whitesmoke;

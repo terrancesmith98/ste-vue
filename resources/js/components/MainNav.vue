@@ -1,69 +1,121 @@
 <template>
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs" id="navId">
-        <li class="logo">
-            <img src="/images/ste-logo-final.png" alt="" />
-        </li>
-
-        <li class="nav-item">
-            <a href="#tab1Id" class="nav-link active">Active</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a
-                class="nav-link dropdown-toggle"
-                data-toggle="dropdown"
-                href="#"
-                role="button"
-                aria-haspopup="true"
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <router-link to="/" class="navbar-brand">
+                <img :src="logoSrc" />
+            </router-link>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
                 aria-expanded="false"
-                >Dropdown</a
+                aria-label="Toggle navigation"
             >
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#tab2Id">Action</a>
-                <a class="dropdown-item" href="#tab3Id">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#tab4Id">Action</a>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a href="#tab5Id" class="nav-link">Another link</a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link disabled">Disabled</a>
-        </li>
-    </ul>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <router-link to="about" class="nav-link">About</router-link>
+                    <router-link to="contact" class="nav-link"
+                        >Contact Us</router-link
+                    >
 
-    <!-- Tab panes -->
-    <div class="tab-content">
-        <div
-            class="tab-pane fade show active"
-            id="tab1Id"
-            role="tabpanel"
-        ></div>
-        <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
-        <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
-        <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
-        <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
-    </div>
+                    <!-- <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="navbarDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Dropdown
+                        </a>
+                        <ul
+                            class="dropdown-menu"
+                            aria-labelledby="navbarDropdown"
+                        >
+                            <li>
+                                <a class="dropdown-item" href="#">Action</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    >Another action</a
+                                >
+                            </li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    >Something else here</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link disabled"
+                            href="#"
+                            tabindex="-1"
+                            aria-disabled="true"
+                            >Disabled</a
+                        >
+                    </li> -->
+                </ul>
+                <!-- <form class="d-flex">
+                    <input
+                        class="form-control me-2"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success" type="submit">
+                        Search
+                    </button>
+                </form> -->
+            </div>
+        </div>
+    </nav>
 </template>
 
 <script>
-// $("#navId a").click((e) => {
-//     e.preventDefault();
-//     $(this).tab("show");
-// });
+export default {
+    data() {
+        return {
+            logoSrc: "/images/ste-logo-full-white-alt1.svg",
+        };
+    },
+};
 </script>
 
 <style lang="scss">
 nav {
-    background: #333;
+    background: #233342;
     color: whitesmoke;
-    height: 100px;
+    height: 120px;
+    .navbar-nav {
+        margin-left: auto;
+        .router-link-active {
+            color: rgb(255, 254, 234);
+        }
+    }
+    .nav-link {
+        color: whitesmoke;
+        text-transform: uppercase;
+        &:hover {
+            color: whitesmoke;
+        }
+    }
+    .navbar-brand {
+        width: 250px;
+        padding: 1em;
+    }
 }
 
 .logo {
     padding: 0.5em;
-    width: 150px;
+    width: 200px;
     img {
         max-width: 100%;
     }

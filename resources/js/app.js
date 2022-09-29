@@ -8,7 +8,9 @@ import axios from "axios";
 import Index from './Index.vue'
 import Home from './components/Home.vue'
 import Contact from './components/Contact.vue'
+import About from './components/About.vue'
 import SupportStatements from './components/SupportStatements.vue'
+import NotFound from './components/NotFound.vue'
 
 import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
@@ -22,10 +24,20 @@ const routes = [
         name: 'home'
     },
     {
+        path: '/about',
+        component: About,
+        name: 'about'
+    },
+    {
         path: '/contact',
         component: Contact,
         name: 'contact'
-    }
+    },
+    // {
+    //     path: '/:pathMatch('*')*',
+    //     component: NotFound,
+    //     name: 'not-found'
+    // }
 ];
 
 // -----------------------------
