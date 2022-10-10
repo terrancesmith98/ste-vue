@@ -28,6 +28,8 @@ export default {
             settings: {
                 itemsToShow: 1,
                 itemToScroll: 1,
+                wrapAround: true,
+                autoplay: 3000,
             },
             breakpoints: {
                 // 700px and up

@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <router-link to="/" class="navbar-brand">
-                <img :src="logoSrc" />
+                <img :src="logoSrc" class="logo" />
             </router-link>
             <button
                 class="navbar-toggler"

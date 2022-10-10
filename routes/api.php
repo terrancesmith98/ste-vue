@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\FaqsController;
 use App\Http\Controllers\API\HeroSpotlightController;
 use App\Http\Controllers\API\MacMemberController;
 use App\Http\Controllers\API\SupportStatementController;
@@ -28,3 +29,4 @@ Route::get('/mac-members', [MacMemberController::class, 'index']);
 Route::get('/hero-spotlights', [HeroSpotlightController::class, 'index']);
 Route::get('/support-statements', [SupportStatementController::class, 'index']);
 Route::post('/support-statement/store', [SupportStatementController::class, 'store']);
+Route::get('/faqs', [FaqsController::class, 'index']);

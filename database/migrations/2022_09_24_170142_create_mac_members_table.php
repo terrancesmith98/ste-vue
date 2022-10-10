@@ -15,8 +15,7 @@ class CreateMacMembersTable extends Migration
     {
         Schema::create('mac_members', function (Blueprint $table) {
             $table->id();
-            $table->string('first_name');
-            $table->string('last_name');
+            $table->string('name');
             $table->string('title');
             $table->mediumText('bio');
             $table->string('image');
